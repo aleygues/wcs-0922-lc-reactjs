@@ -3,8 +3,8 @@ import React from "react";
 function Skill(props) {
   return (
     <li>
-      {props.title}
-      <span className="votes">{props.votes}</span>
+      {props.name}
+      <span className="votes">{props.upvotes}</span>
     </li>
   );
 }

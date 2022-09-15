@@ -7,13 +7,17 @@ function Wilder(props) {
     <article className="card">
       <img src={blank_profile} alt={`${props.name} Profile`} />
       <h3>{props.name}</h3>
-      <h5>{props.city}</h5>
+      {/* <h5>{props.city}</h5> */}
       <p>Lorem ipsum</p>
       <h4>Wild Skills</h4>
       <ul className="skills">
-        {props.skills.map((skill) => {
+        {props.upvotes.map((upvote) => {
           return (
-            <Skill key={skill.id} title={skill.title} votes={skill.votes} />
+            <Skill
+              key={upvote.id}
+              name={upvote.skill.name}
+              upvotes={upvote.upvote}
+            />
           );
         })}
       </ul>
